@@ -1,12 +1,12 @@
 // src/AppRouter.tsx
-import React, { lazy } from "react";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DefaultLayout from "../layout/default";
-import IndexPage from "../pages";
-import ContactPage from "../pages/contact";
-import AboutPage from "../pages/about";
-import BlogPage from "../pages/blog";
-import DocsPage from "../pages/pricing";
+import IndexPage from "../pages/home";
+import AboutPage from "../pages/about/about";
+import BlogPage from "../pages/blog/blog";
+import ContactPage from "../pages/contact/contact";
+import ProjectPage from "../pages/project/project";
 
 const router = createBrowserRouter([
     {
@@ -22,12 +22,12 @@ const router = createBrowserRouter([
                 element: <AboutPage />,
             },
             {
-                path: "/blog",
-                element: <BlogPage />,
+                path: "/project",
+                element: <ProjectPage />,
             },
             {
-                path: "/docs",
-                element: <DocsPage />,
+                path: "/blog",
+                element: <BlogPage />,
             },
             {
                 path: "/contact",

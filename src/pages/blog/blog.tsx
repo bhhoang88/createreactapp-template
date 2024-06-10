@@ -1,6 +1,7 @@
-import { title } from "../components/primitives";
+import React from "react";
+import { title } from "../../components/primitives";
 
-export default function AboutPage() {
+const BlogPage = () => {
     return (
         <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
             <div className="inline-block max-w-lg text-center justify-center">
@@ -8,4 +9,6 @@ export default function AboutPage() {
             </div>
         </section>
     );
-}
+};
+
+export default BlogPage;

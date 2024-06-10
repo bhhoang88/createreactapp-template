@@ -1,17 +1,17 @@
 import { Button } from "@nextui-org/button";
 import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/navbar";
 import { Link } from "react-router-dom";
-import { ThemeSwitch } from "./theme-switch";
-import { Input, Kbd } from "@nextui-org/react";
-import { siteConfig } from "../config/site";
+import { ThemeSwitch } from "../theme-switch";
+import { Image, Input, Kbd } from "@nextui-org/react";
+import { siteConfig } from "../../config/site";
+import Logo from "../../assets/logo.svg"
 import {
     SearchIcon,
-    Logo,
     TwitterIcon,
     DiscordIcon,
     GithubIcon,
     HeartFilledIcon,
-} from "./icons";
+} from "../icons";
 
 const navItems = [
     {
@@ -19,16 +19,16 @@ const navItems = [
         href: "/",
     },
     {
-        label: "Docs",
-        href: "/docs",
+        label: "About",
+        href: "/about",
+    },
+    {
+        label: "Project",
+        href: "/project",
     },
     {
         label: "Blog",
         href: "/blog",
-    },
-    {
-        label: "About",
-        href: "/about",
     },
     {
         label: "Contact",
@@ -58,10 +58,9 @@ export const NavbarHeader = () => {
         />
     );
     return (
-        <Navbar shouldHideOnScroll>
+        <Navbar shouldHideOnScroll className="py-4">
             <Link to={"/"} className="flex gap-2 items-center">
-                <Logo />
-                <p className="font-bold text-inherit">ACME</p>
+                <Image src={Logo} width={80} alt="Buzz!!!" />
             </Link>
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <div className="hidden lg:flex gap-4 justify-start ml-2">
